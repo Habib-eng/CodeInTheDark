@@ -13,7 +13,16 @@ class Codes extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('codes', function (Blueprint $table){
+            $table->id();
+            $table->string("Nom");
+            $table->string("Prenom");
+            $table->string("JE_Name");
+            $table->integer("Round_Number");
+            $table->string("Post_Code");
+            $table->string("Path_File");
+            $table->timestamps();   
+        });
     }
 
     /**
